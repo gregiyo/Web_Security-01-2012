@@ -1,0 +1,15 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Cities</b> and script/action name <b>index</b></p>
+</div>
+
+
+Cities:<br />
+<dl>
+    <?php foreach ($this->cities as $city): ?>
+    <dt title="<?php echo $this->escape($city->id) ?>"><?php echo $this->escape($city->Name) ?></dt>
+    <dd><?php echo $this->escape($city->CountryCode) ?></dd>
+    <dd><?php echo $this->escape($city->District) ?></dd>
+    <dd><?php echo $this->escape($city->Population) ?></dd>
+    <?php endforeach ?>
+</dl>
