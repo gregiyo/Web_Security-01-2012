@@ -2,7 +2,12 @@
 
 	if(!empty($_POST)){
 		include_once "inc/db_connect.inc";
-		$query = "select * from users where username = '{$_POST['username']}' and password = md5('{$_POST['password']}')";
+		/**
+		* It's good practice to assign values to variables, validate then use.
+		*/
+		$username = $_POST['username'];
+		$password = addslashes($_POST['password']);
+		$query = "select * from users where username = '$username' and password = md5('$password')";
 
 		$result_set = mysql_query($query);
 		$results = array();

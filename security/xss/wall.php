@@ -1,7 +1,6 @@
 <form action="" method="get">
-	<p>To execute the XSS attack, please paste</p>
+	<p>To TRY and execute the XSS attack, please paste</p>
 	<pre>&lt;script&gt;document.location = 'cookie_monster.php?cookies=' + document.cookie&lt;/script&gt;</pre>
-	<p>Make sure you clean messages.txt after. Thanks :)</p>
 	<input type="text" name="message"><br />
 	<input type="submit" value ="Post" />
 </form>
@@ -10,10 +9,14 @@
 </script>
 <?php
 	if(!empty($_GET['message'])){
-
-		$fp = fopen('./messages.txt', 'a');
-		fwrite($fp, "{$_GET['message']}<br />");
-		fclose($fp);
+		/**
+		* Assign to a variable then validate.
+		*/
+		$message = htmlentities($_GET['message']);
+		
+		$fp = fopen('./messages.txt', 'a'); // Opens the file
+		fwrite($fp, "$message<br />"); // Writes in the file
+		fclose($fp); // Close the file
 	}
-	readfile('./messages.txt');
+	readfile('./messages.txt'); // Print the output
 ?>
