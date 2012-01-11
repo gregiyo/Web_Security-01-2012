@@ -1,5 +1,6 @@
 drop database if exists `security`;
 create database `security`;
+grant all privileges on `security`.* to security@localhost identified by 'security';
 use security;
 
 create table users(
