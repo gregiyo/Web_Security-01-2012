@@ -40,6 +40,7 @@ class Application_Model_CountryMapper
 			
         );
  
+<<<<<<< HEAD
         if (null === ($id = $country->getCode())) {
             unset($data['Code']);
             $this->getDbTable()->insert($data);
@@ -49,14 +50,29 @@ class Application_Model_CountryMapper
     }
  
     public function find($id)
+=======
+        if (null === ($id = $country->getID())) {
+            unset($data['ID']);
+            $this->getDbTable()->insert($data);
+        } else {
+            $this->getDbTable()->update($data, array('ID = ?' => $id));
+        }
+    }
+ /*
+    public function find($id, Application_Model_Country $country)
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
     {
         $result = $this->getDbTable()->find($id);
         if (0 == count($result)) {
             return;
         }
         $row = $result->current();
+<<<<<<< HEAD
 		$country = new Application_Model_Country();
         $country->setCode($row->Code);
+=======
+        $country->setID($row->ID);
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
 		
                   $country->setName($row->Name);
                   $country->setContinent($row->Continent);
@@ -67,10 +83,15 @@ class Application_Model_CountryMapper
 				  $country->setLocalName($row->LocalName);
 				  $country->setGovernmentForm($row->GovernmentForm);
 				  $country->setCode2($row->Code2);
+<<<<<<< HEAD
 				  
 				  return $country;
     }
  
+=======
+    }
+ */
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
     public function fetchAll()
     {
 	
@@ -80,7 +101,11 @@ class Application_Model_CountryMapper
 		
         foreach ($resultSet as $row) {
             $country = new Application_Model_Country();
+<<<<<<< HEAD
 $country->setCode($row->Code);
+=======
+$country->setID($row->ID);
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
 $country->setName($row->Name);
 $country->setContinent($row->Continent);
 $country->setRegion($row->Region);

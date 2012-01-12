@@ -6,11 +6,15 @@
 	
 	<dl>
 		<?php foreach ($this->countries as $country): ?>
+<<<<<<< HEAD
 		<dt><?php echo $this->escape($country->Name).' '.$this->escape($country->Code); ?> </dt>
 		
 		<dd><?php echo $this->escape($country->Continent); ?> </dd>
 		<dd><?php echo $this->escape($country->Region); ?> </dd>
 		<dd><?php echo $this->escape($country->SurfaceArea); ?> </dd>
+=======
+		<dt><?php echo $this->escape($country->ID) ?> </dt>
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
 		<?php endforeach ?>
 	</dl>
 	

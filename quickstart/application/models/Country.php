@@ -13,7 +13,11 @@ class Application_Model_Country
 	protected $_LocalName;
 	protected $_GovernmentForm;
 	protected $_Code2;
+<<<<<<< HEAD
     protected $_Code;
+=======
+    protected $_ID;
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
  
     public function __construct(array $options = null)
     {
@@ -91,8 +95,13 @@ class Application_Model_Country
         return $this->_Code2;
     }
 
+<<<<<<< HEAD
     public function getCode() {
         return $this->_Code;
+=======
+    public function getID() {
+        return $this->_ID;
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
     }
 
     public function setName($_Name) {
@@ -131,8 +140,13 @@ class Application_Model_Country
         $this->_Code2 = $_Code2;
     }
 
+<<<<<<< HEAD
     public function setCode($_id) {
         $this->_Code = $_id;
+=======
+    public function setID($_id) {
+        $this->_ID = $_id;
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
     }
 }
 

@@ -13,6 +13,7 @@ class CountryController extends Zend_Controller_Action
         $country = new Application_Model_CountryMapper();
 		$this->view->countries = $country->fetchAll();
     }
+<<<<<<< HEAD
 	
 	public function findAction()
     {
@@ -33,6 +34,8 @@ class CountryController extends Zend_Controller_Action
 		$this->view->country = $country;
     }
 	
+=======
+>>>>>>> b85407df4e9c9e496794484206a20a1d61e90058
 
 
 }
