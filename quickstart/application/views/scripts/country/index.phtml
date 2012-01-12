@@ -1,0 +1,14 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Country</b> and script/action name <b>index</b></p>
+	
+	Country Entries: <br />
+	
+	<dl>
+		<?php foreach ($this->countries as $country): ?>
+		<dt><?php echo $this->escape($country->ID) ?> </dt>
+		<?php endforeach ?>
+	</dl>
+	
+	
+</div>

@@ -41,7 +41,7 @@ class Application_Model_CityMapper
             $this->getDbTable()->update($data, array('ID = ?' => $id));
         }
     }
- 
+ /*
     public function find($id, Application_Model_City $city)
     {
         $result = $this->getDbTable()->find($id);
@@ -55,7 +55,7 @@ class Application_Model_CityMapper
                   ->setDistrict($row->District)
                   ->setPopulation($row->Population);
     }
- 
+ */
     public function fetchAll()
     {
         $resultSet = $this->getDbTable()->fetchAll();
