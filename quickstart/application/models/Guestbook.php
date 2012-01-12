@@ -7,6 +7,7 @@ class Application_Model_Guestbook
     protected $_email;
     protected $_id;
 
+
     public function __construct(array $options = null)
     {
         if (is_array($options)) {
@@ -88,4 +89,3 @@ class Application_Model_Guestbook
         return $this->_id;
     }
 }
-

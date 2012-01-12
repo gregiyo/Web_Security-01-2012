@@ -1,0 +1,16 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Cities</b> and script/action name <b>add</b></p>
+</div>
+ 
+Please use the form below to find a Country!
+ 
+<?php
+$this->form->setAction($this->url());
+echo $this->form;
+
+?>
+<dl>
+	<dt><?php echo $this->country->Code . ' '. $this->country->Name; ?></dt>
+	<dd><?php echo $this->country->Continent; ?></dd>
+</dl>
